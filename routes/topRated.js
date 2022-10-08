@@ -25,6 +25,11 @@ router.get("/", (req, res) => {
       let { results } = response.data;
       // res.send(data);
 
+      // This line is here to add just the charset because if not added the names in other langauges
+      // are not diplayed properly
+      res.write("<head><meta charset='UTF-8'><title>Top-Rated</title></head>");
+
+      // Looping over array of objects to get each movie
       for (let i = 0; i < results.length; i++) {
         let title = results[i]["original_title"];
         let link = results[i].id;

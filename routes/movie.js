@@ -12,7 +12,6 @@ router.get("/:id/:posterSize?/:backdropSize?", (req, res) => {
   // Check whether the sizes sent are valid or not
 
   let { posterSize, backdropSize } = req.params;
-  console.log(posterSize + "             " + backdropSize);
   if (posterSize && backdropSize) {
     if (
       posterSizes.includes(posterSize) &&
