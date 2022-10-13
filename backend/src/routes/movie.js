@@ -3,8 +3,8 @@
 const express = require("express");
 
 const instance = require("./instance");
-const imageFilePath = require("./constants/posterImgPath");
-const { posterSizes, backdropSizes } = require("./constants/imgSizes");
+const imageFilePath = require("../constants/posterImgPath");
+const { posterSizes, backdropSizes } = require("../constants/imgSizes");
 
 const router = express.Router();
 

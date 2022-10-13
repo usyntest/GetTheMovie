@@ -1,5 +1,5 @@
 const express = require("express");
-const routes = require("./routes/routes");
+const routes = require("./routes");
 const mysql = require("mysql");
 
 const dotenv = require("dotenv").config();
@@ -12,7 +12,6 @@ const db = mysql.createConnection({
   port: 3306,
   user: "root",
   password: "uday1601",
-  database: "music_app",
 });
 
 db.connect((err) => {
@@ -26,8 +25,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/public", express.static("public"));
 
-routes(app);
+app.use("/api/v1", routes);
 
 app.listen(PORT, () => {
-  console.log(`Listening to PORT ${PORT}`);
+  console.log(`Listening on PORT ${PORT}`);
 });
