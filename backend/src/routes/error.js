@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   res.status(404);
-  res.send("resource not found");
+  res.json({me});
 });
 
 module.exports = router;
