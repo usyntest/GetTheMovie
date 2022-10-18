@@ -19,10 +19,10 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="links ms-auto navbar-nav">
             <div className="nav-item">
-              <Link to="/login" class="btn btn-sm btn-outline-primary m-2">
+              <Link to="/login" className="btn btn-sm btn-outline-primary m-2">
                 Login
               </Link>
-              <Link to="/signin" class="btn btn-sm btn-outline-secondary m-2">
+              <Link to="/signin" className="btn btn-sm btn-outline-secondary m-2">
                 Signin
               </Link>
             </div>

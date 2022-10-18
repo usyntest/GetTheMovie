@@ -4,7 +4,7 @@ const { config } = require("dotenv").config();
 const API_KEY = process.env.API_KEY;
 const baseURL = "https://api.themoviedb.org/3";
 
-instance = axios.create({
+const instance = axios.create({
   baseURL,
   params: {
     api_key: API_KEY,

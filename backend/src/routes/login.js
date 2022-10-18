@@ -17,7 +17,6 @@ router.post("/", (req, res) => {
 
       if (results.length === 0) {
         res.json({ message: "email not found" });
-        return;
       } else {
         db.query(
           `SELECT * FROM users
@@ -29,10 +28,8 @@ router.post("/", (req, res) => {
             }
             if (results2.length === 0) {
               res.json({ message: "password is incorrect" });
-              return;
             } else {
-              res.json({message: "user found", results2});
-              return;
+              res.json({ message: "user found", results2 });
             }
           }
         );

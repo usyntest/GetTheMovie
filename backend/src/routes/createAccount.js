@@ -25,16 +25,13 @@ router.post("/", (req, res) => {
               return;
             }
             res.json({ message: "account successfully created" });
-            return;
           }
         );
       } else {
         if (username === results[0].username) {
           res.json({ message: "username already exists" });
-          return;
         } else {
           res.json({ message: "account with this email already exists" });
-          return;
         }
       }
     }
